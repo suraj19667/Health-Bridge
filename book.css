@@ -1,0 +1,122 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  color: #333;
+}
+
+/* Form Container */
+.form-container {
+  background: #ffffff;
+  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00796b;
+}
+
+/* Form Elements */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: hsl(120, 86%, 44%);
+  box-shadow: 0 0 5px rgba(38, 166, 154, 0.5);
+}
+
+/* Submit Button */
+button {
+  background-color: hsl(120, 86%, 44%);
+  color: white;
+  border: none;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #26f26a;
+}
+
+/* Appointment List Container */
+.appointments-container {
+  background: #ffffff;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00796b;
+}
+
+#appointmentList {
+  list-style: none;
+  padding: 0;
+}
+
+#appointmentList li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 5px solid #26a69a;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+#appointmentList li strong {
+  font-size: 18px;
+  color: #333;
+}
+
+#appointmentList li button {
+  width: auto; /* FIXED: Prevents full width */
+  padding: 8px 16px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#appointmentList li button:hover {
+  background-color: #c62828;
+}
+
+
+#appointmentList li button:hover {
+  background-color: #c62828;
+}
