@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Signup Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | HealthBridge</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
-<body id="login-signup">
-  <div  class="signup-container">
-    <h2>Sign Up</h2>
-    <form>
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-user-plus"></i>
+                <h2>Create Account</h2>
+                <p>Join HealthBridge today</p>
+            </div>
+            
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="fullname">
+                        <i class="fas fa-user"></i>
+                        Full Name
+                    </label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password">
+                </div>
 
-      <label for="confirm">Confirm Password</label>
-      <input type="password" id="confirm" name="confirm" required>
+                <div class="form-group">
+                    <label for="confirm">
+                        <i class="fas fa-lock"></i>
+                        Confirm Password
+                    </label>
+                    <input type="password" id="confirm" name="confirm" required placeholder="Confirm your password">
+                </div>
 
-      <button type="submit" onclick="return sendData()">Sign Up</button>
+                <button type="submit" onclick="return sendData()" class="auth-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Sign Up
+                </button>
 
-       <div style="margin-top: 10px; text-align: center;">
-      <a href="Login.html">
-        <button type="button">Login </button>
-      </a>
+                <div class="auth-footer">
+                    <p>Already have an account? 
+                        <a href="Login.html">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="auth-bg">
+            <div class="bg-content">
+                <h3>HealthBridge</h3>
+                <p>Your trusted healthcare appointment platform</p>
+            </div>
+        </div>
     </div>
-    </form>
-  </div>
-  <script src="Localstorage.js"></script>
+    
+    <script src="Localstorage.js"></script>
 </body>
 </html>

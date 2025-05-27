@@ -1,259 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthBridge</title>
+    <title>HealthBridge - Online Appointment Scheduling</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <style>
-
-    
-    .hospital-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .hospital-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      position: relative;
-    }
-
-    .hospital-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .hospital-card h3 {
-      margin-bottom: 10px;
-      color: #0d1c40;
-    }
-
-    .hospital-card p {
-      font-size: 14px;
-      color: #555;
-    }
-
-   .hospital-card a {
-  display: inline-block;
-  background-color: #ff6b6b;
-  padding: 10px 24px;
-  color: white;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
-
-  /* Positioning at bottom center */
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hospital-card a:hover {
-  background-color: #ff4b4b;
-  transform: translateX(-50%) scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
-}
-
-.hospital{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2em;
-    color: #0d1c40;
-    
-}
-  </style>
-
 </head>
-
 <body>
     <header>
-        <div id="navbar">
-
-            <div>
-              <!-- <img class="logo" src="./images/logo.png" alt="Logo"> -->
-              <p class="HealthBridge">HealthBridge</p>
-
+        <nav id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <p class="HealthBridge">HealthBridge</p>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-menu" id="navMenu">
+                    <div class="nav-links">
+                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="Hospital.html" class="nav-link">Hospitals</a>
+                        <a href="#" class="nav-link">Treatment</a>
+                        <a href="#" class="nav-link">Services</a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="Login.html" class="btn btn-outline">Login</a>
+                        <a href="Signup.html" class="btn btn-primary">Sign Up</a>
+                        <div class="calllogo">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <span>+91 7322821707</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="nav">
-                <a href="index.html">Home</a>
-                <a href="Hospital.html">Hospitals</a>
-                <a href="">Treatment</a>
-                <a href="">Services</a>
-            </div>
-            <div id="login" >
-                <a href="Login.html">Login</a>
-            </div>
-            <div id="signup">
-                <a href="Signup.html">Sign Up</a>
-            </div>
-        
-            <div class="calllogo">
-                <i class="fa-solid fa-phone-flip"></i>&nbsp;
-                +91 7322821707
-            </div>
-        </div>
-
+        </nav>
     </header>
 
     <main>
-     
-        <section class="homepage">
-            <img src="./images/home.jpg" alt="">
-            <h4>Connecting you with qualified doctors <br> for hassle-free appointment booking.<br> Access healthcare with ease,<br>
-                accuracy, and convenience.</h4>
-            <a href="FormBook.html">Get Appointment</a>
-            <!-- <a href="">About Us</a> -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Connecting you with qualified doctors for hassle-free appointment booking</h1>
+                        <p>Access healthcare with ease, accuracy, and convenience.</p>
+                        <a href="FormBook.html" class="btn btn-hero">Get Appointment</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare professionals">
+                    </div>
+                </div>
+            </div>
         </section>
 
-         <section>
-  <h1 class="hospital" align="center">HOSPITALS</h1>
-  <div class="hospital-container" id="hospitalList">
-    <div class="hospital-card">
-      <h3>Apollo Hospital</h3>
-      <p>24/7 emergency services, multispecialty care, trusted doctors.</p><br><br><br>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-    <div class="hospital-card">
-      <h3>Fortis Healthcare</h3>
-      <p>Advanced facilities, experienced surgeons, global standards.</p>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-     <div class="hospital-card">
-      <h3>AIIMS Delhi</h3>
-      <p>Top government medical institute in India with best specialists.</p><br><br><br>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-    </div>
-      </section>
+        <section class="hospitals-section">
+            <div class="container">
+                <h2 class="section-title">HOSPITALS</h2>
+                <div class="hospital-container">
+                    <div class="hospital-card">
+                        <h3>Apollo Hospital</h3>
+                        <p>24/7 emergency services, multispecialty care, trusted doctors.</p>
+                        <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                    </div>
+                    <div class="hospital-card">
+                        <h3>Fortis Healthcare</h3>
+                        <p>Advanced facilities, experienced surgeons, global standards.</p>
+                        <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                    </div>
+                    <div class="hospital-card">
+                        <h3>AIIMS Delhi</h3>
+                        <p>Top government medical institute in India with best specialists.</p>
+                        <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-         <section class="container">
-    <h1>ONLINE MOBILE APPOINTMENT SCHEDULING PLATFORM</h1>
-    <p class="subheading">Online Appointment, Phone-in Appointment, Walk-in Appointment with Token</p>
+        <section class="process-section">
+            <div class="container">
+                <h2 class="section-title">ONLINE MOBILE APPOINTMENT SCHEDULING PLATFORM</h2>
+                <p class="section-subtitle">Online Appointment, Phone-in Appointment, Walk-in Appointment with Token</p>
+                
+                <div class="process-container">
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>DOCTOR NEAR ME</h3>
+                        <p>Doctor / Hospital / Specialization to match specific consultation needs. Confirmed Online Appointment slots, practice locations, to select from to book appointment for clinic consultation or video consultation.</p>
+                    </div>
+                    
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>KNOW YOUR DOCTOR</h3>
+                        <p>Request appointments based on slots, date, consultation location. Know your Doctor to book confirmed doctor Appointment effortlessly with clinic details of practice location to engage with patients effortlessly.</p>
+                    </div>
+                    
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>BOOK CONFIRMED APPOINTMENT</h3>
+                        <p>Avoid endless back and forth communication; empowering with Google verified SMS & dynamic Email notifications. Confirmed Doctor Appointment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card">
-        <img src="./images/doc1.jpg" alt="Doctor Near Me">
-        <h2>DOCTOR NEAR ME</h2>
-        <p>
-          Doctor / Hospital / Specialization to match specific consultation needs.
-          Confirmed Online Appointment slots, practice locations, to select from to
-          book appointment for clinic consultation or video consultation.
-        </p>
-      </div>
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">ONLINE MOBILE APPOINTMENT SCHEDULING PLATFORM</h2>
+                <p class="section-subtitle">Online Appointment, Phone-in Appointment, Walk-in Appointment with Token</p>
 
-      <!-- Arrow -->
-      <div class="arrow">➤</div>
+                <div class="features-container">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <h3>DOCTOR NEAR ME</h3>
+                        <p>Doctor / Hospital / Specialization to match specific consultation needs. Confirmed Online Appointment slots, practice locations, to select from to book appointment for clinic consultation or video consultation.</p>
+                    </div>
 
-      <!-- Card 2 -->
-      <div class="card">
-        <img src="./images/doc2.jpg" alt="Know Your Doctor">
-        <h2>KNOW YOUR DOCTOR</h2>
-        <p>
-          Request appointments based on slots, date, consultation location. Know your
-          Doctor to book confirmed doctor Appointment effortlessly with clinic details
-          of practice location to engage with patients effortlessly.
-        </p>
-      </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h3>KNOW YOUR DOCTOR</h3>
+                        <p>Request appointments based on slots, date, consultation location. Know your Doctor to book confirmed doctor Appointment effortlessly with clinic details of practice location to engage with patients effortlessly.</p>
+                    </div>
 
-      <!-- Arrow -->
-      <div class="arrow">➤</div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <img src="./images/doc3.png" alt="Book Appointment">
-        <h2>BOOK CONFIRMED APPOINTMENT</h2>
-        <p>
-          Avoid endless back and forth communication; empowering with Google verified
-          SMS & dynamic Email notifications. Confirmed Doctor Appointment,
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="features-section">
-    <h2>ONLINE MOBILE APPOINTMENT SCHEDULING PLATFORM</h2>
-    <p class="subtitle">Online Appointment, Phone-in Appointment, Walk-in Appointment with Token</p>
-
-    <div class="features-container">
-      <!-- Feature 1 -->
-      <div class="feature-card">
-        <img src="./images/doc4.png" alt="Doctor Near Me">
-        <h3>DOCTOR NEAR ME</h3>
-        <p>Doctor / Hospital / Specialization to match specific consultation needs. Confirmed Online Appointment slots, practice locations, to select from to book appointment for clinic consultation or video consultation.</p>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="feature-card">
-        <img src="./images/doc5.png" alt="Know Your Doctor">
-        <h3>KNOW YOUR DOCTOR</h3>
-        <p>Request appointments based on slots, date, consultation location. Know your Doctor to book confirmed doctor Appointment effortlessly with clinic details of practice location to engage with patients effortlessly.</p>
-      </div>
-
-      <!-- Feature 3 -->
-      <div class="feature-card">
-        <img src="./images/doc6.png" alt="Book Confirmed Appointment">
-        <h3>BOOK CONFIRMED APPOINTMENT</h3>
-        <p>Avoid endless back and forth communication; empowering with Google verified SMS & dynamic Email notifications. Confirmed Doctor Appointment, clinical procedure scheduling, schedule next consultation with token.</p>
-      </div>
-    </div>
-  </section>
-
-
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-plus"></i>
+                        </div>
+                        <h3>BOOK CONFIRMED APPOINTMENT</h3>
+                        <p>Avoid endless back and forth communication; empowering with Google verified SMS & dynamic Email notifications. Confirmed Doctor Appointment, clinical procedure scheduling, schedule next consultation with token.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Left Column -->
-      <div class="footer-column">
-        <!-- <img src="./images/logo.png" alt="BookNMeet Logo" class="logo"> -->
-        <h1 class="health"> HealthBridge</h1> 
-        <p class="tagline">ONLINE APPOINTMENT SCHEDULING PLATFORM</p>
-        <p><i class="fas fa-map-marker-alt"></i> Mp Nagar, Bhopal , India</p>
-        <p><i class="fas fa-phone-alt"></i> +91 7322821707</p>
-        <p><i class="fas fa-envelope"></i> center@cybrom.com</p>
-        <div class="social-icons">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-whatsapp"></i>
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-android"></i>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3 class="footer-brand">HealthBridge</h3>
+                    <p class="footer-tagline">ONLINE APPOINTMENT SCHEDULING PLATFORM</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Mp Nagar, Bhopal, India</p>
+                        <p><i class="fas fa-phone-alt"></i> +91 7322821707</p>
+                        <p><i class="fas fa-envelope"></i> center@cybrom.com</p>
+                    </div>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-whatsapp"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Hospital.html">Hospitals</a></li>
+                        <li><a href="#">Treatment</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>YOUR GUARANTEED MOBILE ONLINE APPOINTMENT</h4>
+                    <p>With HealthBridge productivity tool, be successful in avoiding unscheduled absences.</p>
+                    <form class="newsletter">
+                        <p>Subscribe to HealthBridge Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
+                        <div class="newsletter-input">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+    </footer>
 
-      <!-- Middle Column -->
-
-      <!-- Right Column -->
-      <div class="footer-column">
-      
-        <h4>YOUR GUARANTEED MOBILE ONLINE APPOINTMENT</h4>
-        <p>
-          With HealthBridge productivity tool, be successful in avoiding unscheduled absences.
-        <form class="newsletter">
-          <p>Subscribe to HealthBridge Newsletter to get Important News, Amazing Offers & Inside Scoops:</p>
-          <input type="email" placeholder="Email">
-          <button type="submit">SUBMIT</button>
-        </form>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

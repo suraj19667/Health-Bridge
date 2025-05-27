@@ -11,7 +11,6 @@ let sendData=()=>{
     localStorage.setItem("Confirm_Pass",cnfpass)
 
 
-    // location.reload()
     location.href="Login.html"
     return false
 

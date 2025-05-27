@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | HealthBridge</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
-<body id="login-signup">
-  <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-user-circle"></i>
+                <h2>Welcome Back</h2>
+                <p>Sign in to your account</p>
+            </div>
+            
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-envelope"></i>
+                        Username/Email
+                    </label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your email">
+                </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
 
-      <button type="submit" onclick="return Login()">Login</button>
+                <button type="submit" onclick="return Login()" class="auth-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
 
-      <div style="margin-top: 10px; text-align: center;">
-      <a href="Signup.html">
-        <button type="button">Sign Up</button>
-      </a>
+                <div class="auth-footer">
+                    <p>Don't have an account? 
+                        <a href="Signup.html">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="auth-bg">
+            <div class="bg-content">
+                <h3>HealthBridge</h3>
+                <p>Your trusted healthcare appointment platform</p>
+            </div>
+        </div>
     </div>
-    </form>
-  </div>
-  <script src="Localstorage.js"></script>
+    
+    <script src="Localstorage.js"></script>
 </body>
 </html>

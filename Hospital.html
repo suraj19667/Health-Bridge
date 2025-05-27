@@ -1,171 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hospitals | HealthBridge</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-
-    header h1 {
-  font-size: 40px;
-  color: #0e1d41;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  /* Remove gap — not valid on h1 */
-}
-
-
-    .search-bar {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .search-bar input {
-      padding: 10px 20px;
-      width: 300px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .hospital-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .hospital-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      position: relative;
-    }
-
-    .hospital-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .hospital-card h3 {
-      margin-bottom: 10px;
-      color: #0d1c40;
-    }
-
-    .hospital-card p {
-      font-size: 14px;
-      color: #555;
-    }
-
-   .hospital-card a {
-  display: inline-block;
-  background-color: #ff6b6b;
-  padding: 10px 24px;
-  color: white;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
-
-  /* Positioning at bottom center */
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hospital-card a:hover {
-  background-color: #ff4b4b;
-  transform: translateX(-50%) scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
-}
-
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals | HealthBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            color: #0e1d41;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .search-section {
+            padding: 40px 0;
+            background-color: white;
+        }
+        
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-bar input:focus {
+            border-color: #4CAF50;
+        }
+        
+        .search-bar i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 18px;
+        }
+        
+        .hospitals-grid {
+            padding: 40px 0 80px;
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
-
+    <!-- Navigation -->
     <header>
-        <div id="navbar">
+        <nav id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <p class="HealthBridge">HealthBridge</p>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-menu" id="navMenu">
+                    <div class="nav-links">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="Hospital.html" class="nav-link active">Hospitals</a>
+                        <a href="#" class="nav-link">Treatment</a>
+                        <a href="#" class="nav-link">Services</a>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="Login.html" class="btn btn-outline">Login</a>
+                        <a href="Signup.html" class="btn btn-primary">Sign Up</a>
+                        <div class="calllogo">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <span>+91 7322821707</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-            <div>
-              <!-- <img class="logo" src="./images/logo.png" alt="Logo"> -->
-              <p class="HealthBridge">HealthBridge</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Partner Hospitals</h1>
+            <p>Find and book appointments at top-rated hospitals</p>
+        </div>
+    </section>
 
-            </div>
-            <div class="nav">
-                <a href="index.html">Home</a>
-                <a href="Hospital.html">Hospitals</a>
-                <a href="">Treatment</a>
-                <a href="">Services</a>
-            </div>
-            <div id="login" >
-                <a href="Login.html">Login</a>
-            </div>
-            <div id="signup">
-                <a href="Signup.html">Sign Up</a>
-            </div>
-        
-            <div class="calllogo">
-                <i class="fa-solid fa-phone-flip"></i>&nbsp;
-                +91 7322821707
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search hospitals..." id="searchInput" onkeyup="filterHospitals()">
+                <i class="fas fa-search"></i>
             </div>
         </div>
+    </section>
 
-    <h1 align="center">Our Partner Hospitals</h1>
-    <p align="center">Find and book appointments at top-rated hospitals</p>
-  </header>
+    <section class="hospitals-grid">
+        <div class="container">
+            <div class="hospital-container" id="hospitalList">
+                <div class="hospital-card">
+                    <h3>Apollo Hospital</h3>
+                    <p>24/7 emergency services, multispecialty care, trusted doctors.</p>
+                    <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                </div>
+                <div class="hospital-card">
+                    <h3>Fortis Healthcare</h3>
+                    <p>Advanced facilities, experienced surgeons, global standards.</p>
+                    <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                </div>
+                <div class="hospital-card">
+                    <h3>Max Super Specialty</h3>
+                    <p>Cardiology, neurology, oncology under one roof.</p>
+                    <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                </div>
+                <div class="hospital-card">
+                    <h3>AIIMS Delhi</h3>
+                    <p>Top government medical institute in India with best specialists.</p>
+                    <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                </div>
+                <div class="hospital-card">
+                    <h3>Narayana Superspeciality Hospital</h3>
+                    <p>Focuses on specific medical specialties, like cardiology or cancer care.</p>
+                    <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                </div>
+                <div class="hospital-card">
+                    <h3>Fortis Memorial Research Institute</h3>
+                    <p>A well-known private hospital known for its research and specialized treatments.</p>
+                    <a href="FormBook.html" class="btn btn-card">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Search hospitals..." id="searchInput" onkeyup="filterHospitals()">
-  </div>
-
-  <div class="hospital-container" id="hospitalList">
-    <div class="hospital-card">
-      <h3>Apollo Hospital</h3>
-      <p>24/7 emergency services, multispecialty care, trusted doctors.</p><br><br><br>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-    <div class="hospital-card">
-      <h3>Fortis Healthcare</h3>
-      <p>Advanced facilities, experienced surgeons, global standards.</p>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-    <div class="hospital-card">
-      <h3>Max Super Specialty</h3>
-      <p>Cardiology, neurology, oncology under one roof.</p>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-    <div class="hospital-card">
-      <h3>AIIMS Delhi</h3>
-      <p>Top government medical institute in India with best specialists.</p><br><br><br>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-    <div class="hospital-card">
-      <h3>Narayana Superspeciality Hospital</h3>
-      <p>Focuses on specific medical specialties, like cardiology or cancer care.</p><br><br><br>
-      <a href="FormBook.html">Book Now</a>
-
-      
-    </div>
-       <div class="hospital-card">
-      <h3>Fortis Memorial Research Institute </h3>
-      <p> A well-known private hospital known for its research and specialized treatments.</p><br><br><br>
-      <a href="FormBook.html">Book Now</a>
-    </div>
-  </div>
-
-
-      </form>
-    </div>
-  </div>
-
-
+    <script src="script.js"></script>
+    <script>
+        function filterHospitals() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const hospitalCards = document.querySelectorAll('.hospital-card');
+            
+            hospitalCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(filter) || description.includes(filter)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

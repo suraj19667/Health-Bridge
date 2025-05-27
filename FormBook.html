@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Doctor Appointment Booking</title>
-  <link rel="stylesheet" href="book.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | HealthBridge</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
-  <div class="form-container">
-    <h2>Book an Appointment</h2>
-    <form id="appointmentForm">
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required />
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">HealthBridge</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="Hospital.html">Hospitals</a>
+            </div>
+        </div>
+    </nav>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+    <div class="main-container">
+        <div class="form-container">
+            <div class="form-header">
+                <i class="fas fa-calendar-plus"></i>
+                <h2>Book an Appointment</h2>
+                <p>Fill out the form below to schedule your appointment</p>
+            </div>
+            
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="fullname">
+                        <i class="fas fa-user"></i>
+                        Full Name
+                    </label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                </div>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required />
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
 
-      <label for="date">Appointment Date</label>
-      <input type="date" id="date" name="date" required />
+                <div class="form-group">
+                    <label for="phone">
+                        <i class="fas fa-phone"></i>
+                        Phone Number
+                    </label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
 
-      <label for="time">Time</label>
-      <input type="time" id="time" name="time" required />
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">
+                            <i class="fas fa-calendar"></i>
+                            Appointment Date
+                        </label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
 
-      <label for="message">Reason for Appointment</label>
-      <textarea id="message" name="message" rows="4"></textarea>
+                    <div class="form-group">
+                        <label for="time">
+                            <i class="fas fa-clock"></i>
+                            Time
+                        </label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
 
-      <button type="submit">Book Now</button>
-    </form>
-  </div>
+                <div class="form-group">
+                    <label for="message">
+                        <i class="fas fa-comment-medical"></i>
+                        Reason for Appointment
+                    </label>
+                    <textarea id="message" name="message" rows="4" placeholder="Describe your reason for the appointment"></textarea>
+                </div>
 
-  <div class="appointments-container">
-    <h3>All Appointments</h3>
-    <ul id="appointmentList"></ul>
-  </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-check"></i>
+                    Book Now
+                </button>
+            </form>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="appointments-container">
+            <div class="appointments-header">
+                <i class="fas fa-list"></i>
+                <h3>All Appointments</h3>
+                <p id="appointmentCount">No appointments scheduled</p>
+            </div>
+            
+            <div class="appointments-list">
+                <ul id="appointmentList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
